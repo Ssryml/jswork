@@ -21,12 +21,14 @@ function monkey() {
     }
     document.getElementById('monkeyking').innerText = monkey[0]
 }
-    function stat() {
+
+      function stat(){
         let str = document.getElementById("str").value
         let obj = {}
-        document.write(str.split("")).innerText
-
-
-
+        var array = str.split("")
+        array = array.sort()
+        for(var i=0,aa=str.length;i<aa;i++){
+            obj[array[i]]=(obj[array[i]]+1) || aa;
+        }
         document.getElementById('result').innerText = JSON.stringify(obj)
-      }
+    }
