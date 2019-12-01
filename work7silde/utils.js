@@ -64,4 +64,4 @@ function showLog(logValues,showElement){
     showElement.innerHTML=str
     if(pos[0]!=-1)
     setTimeout("showLog(logValues,showDiv)",500)
-}
+}s
