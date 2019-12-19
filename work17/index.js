@@ -40,7 +40,7 @@ for(var i = 0;i<inputs.length-1;++i){
                 msg = {'success':'手机号码输入正确','error':tips};
                 break;
                 case 'email':
-                    reg = /^(\w+(\_|\-|\.)*)+@(\w+(\-)?)+(\.\w{2})+$/;
+                    reg = /^(\w+(\_|\-|\.)*)+@(\w+(\-)?)+(\.\w{2,})+$/;
                     msg = {'success':'邮箱输入正确','error':tips};
                     break;
         }
