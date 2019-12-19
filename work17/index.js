@@ -1,9 +1,10 @@
 var inputs = document.getElementsByTagName('input');
 for(var i = 0;i<inputs.length-1;++i){
     inputs[i].onblur = inputBlur;
+}
     function inputBlur(){
         var name = this.name;
-        var value = this.value;
+        var val = this.value;
         var tips = this.placeholder;
         var tips_obj = this.parentNode.nextElementSibling;
         val = val.trim();
@@ -19,9 +20,9 @@ for(var i = 0;i<inputs.length-1;++i){
         }
     }
     function getRegMsg(name,tips) {  
-        var reg = msg = ''
+        var reg = msg = '';
         switch(name){
-            case 'username';
+            case 'username':
             reg = /^[a-zA-Z]{4,12}$/;
             msg = {'success':'用户名输入正确','error':tips};
             break;
@@ -42,7 +43,9 @@ for(var i = 0;i<inputs.length-1;++i){
                     reg = /^(\w+(\_|\-|\.)*)+@(\w+(\-)?)+(\.\w{2})+$/;
                     msg = {'success':'邮箱输入正确','error':tips};
                     break;
+        }
                     return{'reg':reg,'msg':msg};
+    }
                     function success(obj,msg) {  
                         obj.className = 'success';
                         obj.innerHTML = msg;
@@ -51,6 +54,5 @@ for(var i = 0;i<inputs.length-1;++i){
                         obj.className = 'error';
                         obj.innerHTML = msg +'，请重新输入';
                     }
-        }
-    }
-}
+        
+    
