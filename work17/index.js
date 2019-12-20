@@ -32,8 +32,8 @@ for(var i = 0;i<inputs.length-1;++i){
             break;
             case 'repwd': 
             var con = document.getElementsByTagName('input')[1].value;
-            reg = RegExp("^" +con +"$");
-            msg = {'success':'两次密码输入正确','error':'两次密码输入不一致'};
+            reg = RegExp("^" + con + "$");
+            msg = {'success':'两次密码输入正确','error':'两次密码的输入不一致'};
             break;
             case 'tel':
                 reg = /^1[34578]\d{9}$/;
